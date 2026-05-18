@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Mittal — Brand Strategist</title>
+  <meta name="description" content="Brand strategist across Canada, India, and the UK. A decade of campaign work, cultural insight, and briefs that crack open.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* HERO IMAGE: show full artwork without cropping */
+    .hero-right {
+      position: relative;
+      min-height: clamp(260px, 42vw, 760px);
+      overflow: hidden;
+    }
+
+    .hero-image-bg,
+    .hero-image-overlay {
+      position: absolute;
+      inset: 0;
+    }
+
+    .hero-image-bg {
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+      background-size: contain !important;
+      background-color: #ece7df;
+    }
+
+    .hero-image-overlay {
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 70%,
+        rgba(0, 0, 0, 0.28) 100%
+      );
+    }
+
+    @media (max-width: 768px) {
+      .hero-right {
+        min-height: clamp(220px, 58vw, 360px);
+        margin-bottom: 24px;
+      }
+
+      .hero-image-bg {
+        background-position: center top !important;
+      }
+    }
+
+    /* CASE STUDY THUMBNAILS */
+    .case-thumb,
+    .case-thumb-placeholder {
+      width: 88px;
+      height: 56px;
+      object-fit: cover;
+      flex-shrink: 0;
+      border-radius: 4px;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Mobile Nav Overlay -->
+  <nav class="nav-mobile" id="navMobile" aria-hidden="true">
+    <a href="#work"    onclick="closeMobileNav()">Work</a>
+    <a href="#about"   onclick="closeMobileNav()">About</a>
+    <a href="#contact" onclick="closeMobileNav()">Contact</a>
+  </nav>
+
+  <!-- Main Nav -->
+  <header class="nav" id="mainNav">
+    <a href="/" class="nav-logo">Sameer Mittal<em>.</em></a>
+    <ul class="nav-links" role="list">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero">
+
+    <!-- Left: all text content -->
+    <div class="hero-left">
+      <p class="hero-eyebrow reveal">Canada · India · UK</p>
+      <h1 class="hero-name reveal">Sameer<br><em>Mittal</em></h1>
+      <p class="hero-title reveal">"The best moment in strategy is not the campaign."</p>
+      <p class="hero-bio reveal">It is the second the brief cracks open. A decade across three markets, doing exactly that.</p>
+
+      <p class="stats-label reveal">Selected Results</p>
+
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <div class="stat-number">39%</div>
+          <div class="stat-label">Revenue Growth · Vespa</div>
+          <div class="stat-descriptor">Brand repositioning and digital ecosystem</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">5.1M</div>
+          <div class="stat-label">Impressions · Ontario Racing</div>
+          <div class="stat-descriptor">South Asian campaign, single season</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">700K</div>
+          <div class="stat-label">Trees Planted · Hero MotoCorp</div>
+          <div class="stat-descriptor">CSR campaign, personalised at scale</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">5×</div>
+          <div class="stat-label">Industry Awards</div>
+          <div class="stat-descriptor">D&amp;AD, Marketing Awards, Summit Creative</div>
+        </div>
+      </div>
+
+      <div class="hero-tags reveal">
+        <span class="tag">Brand Strategy</span>
+        <span class="tag">Campaign Platform</span>
+        <span class="tag">Consumer Insight</span>
+        <span class="tag">Automotive</span>
+        <span class="tag">Brief Writing</span>
+        <span class="tag">Cultural Strategy</span>
+        <span class="tag">Digital &amp; Social</span>
+        <span class="tag">CRM</span>
+      </div>
+    </div>
+
+    <!-- Right: hero image -->
+    <div class="hero-right" aria-hidden="true">
+      <div class="hero-image-bg"></div>
+      <div class="hero-image-overlay"></div>
+    </div>
+
+  </section>
+
+  <!-- ============================================================
+       WORK
+  ============================================================ -->
+  <section class="work" id="work">
+    <p class="section-label">Case Studies</p>
+    <ul class="case-list" id="caseList" role="list">
+      <!-- Injected by JS from CASES data below -->
+    </ul>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section class="about" id="about">
+    <p class="section-label reveal">About</p>
+    <div class="about-inner">
+
+      <h2 class="about-heading reveal">The best moment<br>in strategy isn't<br>the campaign.</h2>
+
+      <div class="about-body">
+        <p class="about-para reveal">It's the second the brief cracks open.</p>
+
+        <p class="about-para reveal">A decade of brand work across three countries — campaigns that have won at D&amp;AD and the Marketing Awards, raised the roof on share of voice and profits, and occasionally got a Creative Director off his chair.</p>
+
+        <p class="about-para reveal">The clients I've worked best with come in knowing something isn't working. They're usually right about the symptom and wrong about the cause. That gap — between what's being asked and what actually needs solving — is where the work gets interesting.</p>
+
+        <div class="about-rule"></div>
+
+        <ul class="credentials reveal" role="list">
+          <li class="cred-item">
+            <span class="cred-title">Strategist · Balmoral</span>
+            <span class="cred-year">2019–2020</span>
+          </li>
+          <li class="cred-item">
+            <span class="cred-title">Senior Strategist · Grey India</span>
+            <span class="cred-year">2016–2018</span>
+          </li>
+          <li class="cred-item">
+            <span class="cred-title">Senior Copywriter (Strategic) · Ogilvy India</span>
+            <span class="cred-year">2013–2015</span>
+          </li>
+          <li class="cred-item">
+            <span class="cred-title">Co-Founder · Clue Box UK</span>
+            <span class="cred-year">2010–2013</span>
+          </li>
+          <li class="cred-item">
+            <span class="cred-title">Strategy &amp; Planning Boot Camp · Miami Ad School Toronto</span>
+            <span class="cred-year">2019</span>
+          </li>
+          <li class="cred-item">
+            <span class="cred-title">MA, Creative Advertising · University College Falmouth, UK</span>
+            <span class="cred-year">2011</span>
+          </li>
+        </ul>
+
+        <div class="about-rule"></div>
+
+        <ul class="capabilities reveal" role="list">
+          <li class="cap-item">Campaign platform &amp; brand positioning</li>
+          <li class="cap-item">Cultural &amp; behavioural insight</li>
+          <li class="cap-item">Brief writing &amp; creative direction</li>
+          <li class="cap-item">Automotive, luxury &amp; lifestyle categories</li>
+          <li class="cap-item">Integrated &amp; digital campaign strategy</li>
+          <li class="cap-item">Multicultural &amp; cross-market strategy</li>
+          <li class="cap-item">Resourceful thinking across budgets, timelines and teams</li>
+        </ul>
+
+        <blockquote class="pov-quote reveal">
+          <p>"The best brief I ever wrote was the one that made the creative director lean forward. Not because it told them what to make — but because it gave them one true thing to build from."</p>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <h2 class="contact-heading reveal">If your brief<br>doesn't have<br>an obvious answer,<br>let's talk.</h2>
+      <div class="contact-right">
+        <p class="contact-desc reveal">Open to senior strategy roles, brand engagements, and the right consulting conversation. Come with a real problem.</p>
+        <div class="contact-links reveal">
+          <a href="mailto:sameer@sameermittal.co" class="contact-link">
+            <span class="link-arrow">↗</span>sameer@sameermittal.co
+          </a>
+          <a href="https://linkedin.com/in/sameer-mittal" target="_blank" rel="noopener noreferrer" class="contact-link">
+            <span class="link-arrow">↗</span>linkedin.com/in/sameer-mittal
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span class="footer-copy">© 2026 Sameer Mittal</span>
+    <span class="footer-geo">Canada · India · UK</span>
+  </footer>
+
+  <script>
+    // ============================================================
+    // CASES — source of truth for the case study list
+    // Edit here; the list renders from this data
+    // ============================================================
+    const CASES = [
+      {
+        id: '00',
+        slug: 'ontario-racing',
+        client: 'Ontario Racing · Balmoral',
+        title: 'Break the Routine',
+        subhead: 'The mainstream agency had a script. We had a different audience.',
+        award: '★ Gold & Silver · Marketing Awards 2020',
+        thumb: 'images/PrintAd-OntarioRacing-CentreSpread.PNG',
+        video: false,
+      },
+      {
+        id: '01',
+        slug: 'ottawa-tourism',
+        client: 'Ottawa Tourism · Balmoral',
+        title: 'Discovering Canada Starts Here',
+        subhead: 'Ottawa isn\'t a tourist destination. It\'s a statement of belonging.',
+        award: '★ Silver & Bronze · Summit Creative Awards',
+        thumb: 'images/OttawaLandingPage.png',
+        video: false,
+      },
+      {
+        id: '02',
+        slug: 'loreal-paris',
+        client: 'L\'Oréal Paris · Clue Box UK',
+        title: 'Proudly [Age]',
+        subhead: 'Women entered their age. They left as a L\'Oréal Paris advertisement.',
+        award: '★ D&AD New Blood',
+        thumb: 'images/loreal-paris-thumb.jpg',
+        video: true,
+      },
+      {
+        id: '03',
+        slug: 'kokuyo-camlin',
+        client: 'Kokuyo Camlin · Grey India',
+        title: 'Inspire A Billion',
+        subhead: 'A campaign built in 5 days. A belief built for a billion.',
+        award: null,
+        thumb: 'images/kokuyo-camlin-thumb.jpg',
+        video: true,
+      },
+      {
+        id: '04',
+        slug: 'hero-motocorp',
+        client: 'Hero MotoCorp · Grey India',
+        title: 'Happy Earth',
+        subhead: 'A CSR campaign that planted 700,000 trees — one name at a time.',
+        award: null,
+        thumb: 'images/HH1.png',
+        video: false,
+      },
+      {
+        id: '05',
+        slug: 'vespa',
+        client: 'Vespa · Ogilvy India',
+        title: 'An Iconic Comeback',
+        subhead: 'Vespa isn\'t a scooter. It\'s an identity.',
+        award: null,
+        thumb: 'images/Vespa.gif',
+        video: false,
+      },
+      {
+        id: '06',
+        slug: 'hopscotch',
+        client: 'Hopscotch · Grey India',
+        title: 'The Faux Fashion Show',
+        subhead: 'A startup that became a fashion label.',
+        award: null,
+        thumb: 'images/Ref-LandingPage1.jpg',
+        video: false,
+      },
+      {
+        id: '07',
+        slug: 'grocery-gateway',
+        client: 'Grocery Gateway · Longo\'s',
+        title: 'Time Saved Is Time Gained',
+        subhead: 'Before Covid changed habits, this strategy tried to change behaviours.',
+        award: null,
+        thumb: 'images/Grocerygateway-1.png',
+        video: false,
+      },
+      {
+        id: '08',
+        slug: 'weight-watchers',
+        client: 'WW (Weight Watchers)',
+        title: 'The Good Stuff, Frozen',
+        subhead: 'The product wasn\'t the problem. The man\'s self-image was.',
+        award: null,
+        thumb: 'images/WW-1.jpg',
+        video: false,
+      },
+      {
+        id: '09',
+        slug: 'vat69',
+        client: 'VAT 69 Whisky · India',
+        title: 'The Ultimate Den',
+        subhead: 'No liquor advertising allowed. No problem.',
+        award: null,
+        thumb: 'images/VAt69-IDEAboard.jpg',
+        video: false,
+      },
+    ];
+
+    // ============================================================
+    // RENDER CASE LIST
+    // ============================================================
+    const videoIcon = `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><polygon points="6,3 20,12 6,21"/></svg>`;
+
+    const caseList = document.getElementById('caseList');
+
+    CASES.forEach(c => {
+      const li = document.createElement('li');
+      li.className = 'case-item reveal';
+
+      const thumbHTML = c.thumb
+        ? `<img class="case-thumb" src="${c.thumb}" alt="${c.client}" loading="lazy" width="88" height="56">`
+        : `<div class="case-thumb-placeholder" aria-hidden="true">${videoIcon}</div>`;
+
+      const awardHTML = c.award
+        ? `<span class="case-award">${c.award}</span>`
+        : '';
+
+      li.innerHTML = `
+        <a href="${c.slug}.html" class="case-link">
+          <span class="case-num" aria-hidden="true">${c.id}</span>
+          ${thumbHTML}
+          <div class="case-info">
+            <span class="case-client">${c.client}</span>
+            <span class="case-title">${c.title}</span>
+            <span class="case-subhead">${c.subhead}</span>
+            ${awardHTML}
+          </div>
+          <span class="case-arrow" aria-hidden="true">→</span>
+        </a>
+      `;
+
+      caseList.appendChild(li);
+    });
+
+    // ============================================================
+    // CUSTOM CURSOR (desktop only)
+    // ============================================================
+    const dot  = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+    });
+
+    (function tick() {
+      rx += (mx - rx) * 0.11;
+      ry += (my - ry) * 0.11;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(tick);
+    })();
+
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('expanded'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('expanded'));
+    });
+
+    // ============================================================
+    // NAV — scroll border
+    // ============================================================
+    const mainNav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      mainNav.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // ============================================================
+    // MOBILE NAV
+    // ============================================================
+    const navToggle = document.getElementById('navToggle');
+    const navMobile = document.getElementById('navMobile');
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = navMobile.classList.toggle('open');
+      navToggle.classList.toggle('open', isOpen);
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navMobile.setAttribute('aria-hidden', !isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    function closeMobileNav() {
+      navMobile.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+      navMobile.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // ============================================================
+    // SCROLL REVEAL
+    // ============================================================
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -32px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  </script>
+</body>
+</html>
